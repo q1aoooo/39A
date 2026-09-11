@@ -91,7 +91,7 @@
         }
 
         .about-image img {
-            width: 150%;
+            width: 100%;
             max-width: 500px;
             height: auto;
             border-radius: 8px;
@@ -121,6 +121,14 @@
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
+        }
+
+        /* 讓地圖在手機上不會超出畫面 */
+        .map iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            border: 0;
         }
 
         footer {
@@ -168,6 +176,34 @@
             font-size: 30px;
             cursor: pointer;
         }
+
+        /* 手機版調整 */
+        @media (max-width: 700px) {
+            section {
+                margin: 20px 12px;
+                padding: 16px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            .logo {
+                width: 110px;
+                height: 110px;
+            }
+            .logo h1 {
+                font-size: 34px;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+            .about-text {
+                padding-right: 0;
+            }
+            .map iframe {
+                height: 300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -189,6 +225,7 @@
 
     <div class="sidebar" id="sidebar">
         <span class="close-btn" onclick="toggleSidebar()">×</span>
+        <a href="index.html">主頁</a>
         <a href="about.html">關於我們</a>
         <a href="specials.html">精選美味</a>
         <a href="menu.html">菜單介紹</a>
@@ -198,8 +235,7 @@
     <section class="about-section">
         <h2>關於我們</h2>
         <div class="about-image">
-           
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462572311_1925198861306620_7542358498982757367_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=gb0s2-18OH8Q7kNvgHp9920&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QE-DSexBRNHGLwfUzsONrv3ggq8tQ-VdCr3jnJtaJyKWw&oe=6769064C" alt="品牌介紹圖片" />
+            <img src="logo.png" alt="39A 標誌" />
         </div>
         <div class="about-content">
             <div class="about-text">
@@ -216,13 +252,12 @@
     <section class="about-section">
         <h2>品牌介紹</h2>
         <div class="about-image">
-            <!-- 在這裡放置一張與品牌介紹相關的圖片 -->
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462558925_970687531574099_4550903295078610248_n.png?stp=dst-png_s600x600&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=aM9XUkg-t7gQ7kNvgEp56n-&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QFyCKLRt3URIXll0og27kGzjFbLWNym3r_t1vcx1HgM5g&oe=6768D5B3" alt="品牌介紹圖片" />
+            <img src="brand.png" alt="店內霓虹燈 Dream Forever" />
         </div>
         <div class="about-content">
             <div class="about-text">
                 <p style="text-align: left;">
-                    <strong>39A的前身是39A café。39A café是之前在澳洲認識的一票朋友開的咖啡館。他們在澳洲相遇，因抱持著相同的夢想和渴望，收拾好行囊返家創業。店內牆上的霓虹燈，像是提醒並激勵著大家回到家鄉的初衷，也告訴了來到店裡的顧客「想做的事就去做吧！」<strong>Let us dream forever</strong></strong>
+                    <strong>39A的前身是39A café。39A café是之前在澳洲認識的一票朋友開的咖啡館。他們在澳洲相遇，因抱持著相同的夢想和渴望，收拾好行囊返家創業。店內牆上的霓虹燈，像是提醒並激勵著大家回到家鄉的初衷，也告訴了來到店裡的顧客「想做的事就去做吧！」Let us dream forever</strong>
                 </p>
                 
                 <p style="text-align: left;">
@@ -242,17 +277,18 @@
     <section class="environment-section">
         <h2>店內環境</h2>
         <div class="gallery">
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462549982_573114495313302_2573419730615368845_n.png?stp=dst-png_s640x640&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=sH_p7NHJbugQ7kNvgFOlrHE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QEWKj0_bgntnrhyODp5KRwdeU80B7UvyPDNwC0DAkXN3g&oe=6768D9DF" alt="店內環境1" />
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462566447_1588034351804618_2329653761090557886_n.jpg?stp=dst-jpg_s552x414_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ath8P0O31MkQ7kNvgG7qFhv&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QHh-Pws9HAFGQE68zmiRkWCqgW5iPpBtskgXnLE9iVT0g&oe=6769172F" alt="店內環境2" />
-           
+            <img src="interior.jpg" alt="店內用餐環境" />
+            <img src="kitchen.jpg" alt="開放式廚房" />
+        </div>
     </section>
 
     <section class="location-section">
         <h2>位置資訊</h2>
        
-        <p><strong>地址：</strong>新竹市東區南門街29-1號(南門公園裡)</strong></p>
+        <p><strong>地址：</strong>新竹市東區南門街29-1號(南門公園裡)</p>
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d905.4602089453255!2d120.9673374!3d24.8009031!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468350004b3e815%3A0x944777d77862a3df!2zMzlBIO-8iOWFrOS8keizh-ioiuS-nUlH54K65Li777yJ!5e0!3m2!1szh-TW!2stw!4v1733025338195!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d905.4602089453255!2d120.9673374!3d24.8009031!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468350004b3e815%3A0x944777d77862a3df!2zMzlBIO-8iOWFrOS8keizh-ioiuS-nUlH54K65Li777yJ!5e0!3m2!1szh-TW!2stw!4v1733025338195!5m2!1szh-TW!2stw" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </section>
 
     <footer>
