@@ -91,10 +91,16 @@
 
         .about-image img {
             width: 100%; /* 使圖片縮放 */
-            max-width: 500px;
+            max-width: 720px;
             height: auto;
             border-radius: 8px;
             cursor: pointer;
+        }
+
+        .menu-hint {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #666;
         }
 
         .gallery {
@@ -179,12 +185,32 @@
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            overflow: auto; /* 放大後可捲動 */
         }
 
         .modal img {
-            max-width: 90%;
-            max-height: 90%;
+            max-width: 95%;
+            max-height: 95%;
             border-radius: 8px;
+        }
+
+        /* 手機版調整 */
+        @media (max-width: 700px) {
+            section {
+                margin: 20px 12px;
+                padding: 16px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            .logo {
+                width: 110px;
+                height: 110px;
+            }
+            .logo h1 {
+                font-size: 34px;
+            }
         }
 
     </style>
@@ -208,6 +234,7 @@
 
     <div class="sidebar" id="sidebar">
         <span class="close-btn" onclick="toggleSidebar()">×</span>
+        <a href="index.html">主頁</a>
         <a href="about.html">關於我們</a>
         <a href="specials.html">精選美味</a>
         <a href="menu.html">菜單介紹</a>
@@ -217,8 +244,9 @@
     <section class="about-section">
         <h2>店內菜單</h2>
         <div class="about-image">
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462563488_365457609945770_4163592561090296784_n.png?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=UuE6vLyfq9wQ7kNvgFZtNc9&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QGE3H3VgH1AFm3Uqo4vKLDfEr7Hx2ucfJZFxPRih9D9YQ&oe=676902B4" alt="品牌介紹圖片" onclick="openModal(this)" />
+            <img src="menu-full.png" alt="39A 店內菜單" onclick="openModal(this)" />
         </div>
+        <p class="menu-hint">點擊菜單可放大檢視</p>
     </section>
 
     <footer>
