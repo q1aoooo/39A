@@ -94,6 +94,7 @@
         .gallery {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 20px;
             margin-top: 20px;
         }
@@ -149,6 +150,11 @@
         object-fit: contain;
         border-radius: 8px;
 }
+/* FB 原圖四周留白較多，放大圖框讓兩個標誌看起來一樣大 */
+.gallery img.fb-icon {
+        width: 270px;
+        height: 270px;
+}
 .long-img {
     width: 100%;      /* 確保寬度填滿父容器 */
     height: auto;     /* 高度自動調整，保持長方形比例 */
@@ -185,6 +191,10 @@
                 align-items: center;
             }
             .gallery img {
+                width: 150px;
+                height: 150px;
+            }
+            .gallery img.fb-icon {
                 width: 200px;
                 height: 200px;
             }
@@ -244,7 +254,7 @@
         <div class="gallery">
             <!-- 左側圖片，點選連結至 Facebook -->
             <a href="https://www.facebook.com/39Acafe/?locale=zh_TW" target="_blank">
-                <img src="fb-log.png" alt="Facebook" />
+                <img class="fb-icon" src="fb-log.png" alt="Facebook" />
             </a>
     
             <!-- 右側圖片，點選連結至 Instagram -->
