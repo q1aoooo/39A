@@ -148,6 +148,13 @@
             font-size: 30px;
             cursor: pointer;
         }
+
+        /* 手機版：菜色改為單欄 */
+        @media (max-width: 700px) {
+            .dish-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -171,7 +178,7 @@
     <!-- 側邊欄 -->
     <div class="sidebar" id="sidebar">
         <span class="close-btn" onclick="toggleSidebar()">×</span>
-        <li><a href="index.html">主頁</a></li> 
+        <a href="index.html">主頁</a>
         <a href="about.html">關於我們</a>
         <a href="specials.html">精選美味</a>
         <a href="menu.html">菜單介紹</a>
@@ -183,25 +190,25 @@
         <h2>精選美味</h2>
         <div class="dish-grid">
             <div class="dish">
-                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462553521_1919220758899308_8524996408797789443_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=xs7Sk0khaDYQ7kNvgFqibul&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QG51aJsonLPgzd9hopt-k42Ry52l_ty0BrGMk4jV801hA&oe=6768F56E" alt="39A經典餐盤">
+                <img src="classic-plate.jpg" alt="39A經典餐盤">
                 <div class="dish-name"><strong>經典餐盤</strong></div>
                 <div class="dish-description">手工肉腸、煎雙蛋、奶油蘑菇、煙燻火腿、炸馬鈴薯角、丹麥捲、牛番茄</div>
                 <div class="dish-price">$390</div>
             </div>
             <div class="dish">
-                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462543329_533602806167824_1161294063149245638_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=1CMdT7lUCKcQ7kNvgETiuSW&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QGbwXq7nHu-79nPPRl73Qfiaz_xPEDkmf9KnCS5s7rh0A&oe=67690023" alt="鮭魚酪梨水波蛋可頌">
-                <div class="dish-name"><strong>鮭魚酪梨水波但可頌</strong></div>
+                <img src="salmon-croissant.jpg" alt="鮭魚酪梨水波蛋可頌">
+                <div class="dish-name"><strong>鮭魚酪梨水波蛋可頌</strong></div>
                 <div class="dish-description">鮭魚、鮭魚卵、酪梨醬、可頌、水波蛋、芝麻葉</div>
                 <div class="dish-price">$370</div>
             </div>
             <div class="dish">
-                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462560737_1856899404839591_7925479277882710001_n.jpg?stp=dst-jpg_s480x480&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=39BXNkXSxk0Q7kNvgHy1HdS&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QHmDYvMV5jc0NXCaoSEAW-g3UrGWmUlkQoH25pmlmClsg&oe=6768FDEB" alt="MOJO手撕豬肉堡">
+                <img src="mojo-burger.jpg" alt="MOJO手撕豬肉堡">
                 <div class="dish-name"><strong>MOJO手撕豬肉堡</strong></div>
                 <div class="dish-description">慢燉手撕豬、酪梨醬、漬菜、炸洋蔥圈、甜菜根、布里歐許</div>
                 <div class="dish-price">$370</div>
             </div>
             <div class="dish">
-                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462561043_3620326644780132_8515858724235603930_n.jpg?stp=dst-jpg_s480x480&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=urt4_fc6KloQ7kNvgH6I-K7&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QH8FtgMdyCEOteOa82oKGG4s-Ybrj8l4J5Im_8GoOJchg&oe=6768EC40" alt="摩洛哥海鮮巧達碗">
+                <img src="seafood-chowder.jpg" alt="摩洛哥海鮮巧達碗">
                 <div class="dish-name"><strong>摩洛哥海鮮巧達碗</strong></div>
                 <div class="dish-description">蛤蜊、鮮蝦、鮮魚、透抽、馬鈴薯、佛卡夏</div>
                 <div class="dish-price">$380</div>
